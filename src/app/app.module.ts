@@ -6,6 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { ListProductsComponent } from './components/list-products/list-products.component';
+import { ItemProductComponent } from './components/item-product/item-product.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
 
 
 const routes: Routes = [
@@ -18,7 +22,11 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderComponent,
+    ListProductsComponent,
+    ItemProductComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
