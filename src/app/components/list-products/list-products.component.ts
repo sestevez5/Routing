@@ -1,6 +1,6 @@
 import { Product } from './../../models/product';
 import { DataService } from './../../services/data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 
 @Component({
   selector: 'app-list-products',
@@ -13,15 +13,16 @@ export class ListProductsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.sendGetRequest().subscribe(
-      (data: any[]) => {
-        console.log(data);
 
-        data.forEach()
-        this.productos=data;
-      }
-    )
+    this.dataService.sendGetRequest()
+    .subscribe(
+      (products: any[]) => {this.products = products.map(p => this.dec(p)); console.log(this.products);}
+    );
+  }
 
+  // tslint:disable-next-line: typedef
+  dec(p: any) {
+    return new Product(p.id, p.name, p.description, p.price, p.imageUrl, p.quantity);
   }
 
 }
