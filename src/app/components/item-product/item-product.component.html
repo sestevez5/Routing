@@ -1,44 +1,8 @@
-<!-- <div class="card" style="width: 40rem;">
-    <h5 class="card-title">{{product.name}}</h5>
-    <h5 class="card-title">{{product.id}}</h5>
-    
-    <div class="card-body d-flex">
-        
-        <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
-
-      <p class="card-text">{{product.description}}</p>
-      
-    </div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-<br>
-<div class="card flex-row flex-wrap" style="width: 40rem;">
-    <div class="card-header border-0">
-        <img src={{product.imageUrl}} class="img-thumbnail" alt="">
-    </div>
-    <div class="card-block px-2">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Description</p>
-        <a href="#" class="btn btn-primary">BUTTON</a>
-    </div>
-    <div class="w-100"></div>
-    <div class="card-footer w-100 text-muted">
-        Footer stating cats are CUTE little animals
-    </div>
-</div> -->
-
-
 <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters ">
-      <div class="col-md-4 d-flex align-items-center">
-        <img src={{product.imageUrl}}+?{{product.id}} class="img-fluid m-1" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{product.id}}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
+  <img src={{product.imageUrl}}+?{{product.id}} class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
   </div>
+</div>
+
+
