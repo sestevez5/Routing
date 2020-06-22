@@ -14,10 +14,9 @@ export class ListProductsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.dataService.sendGetRequest()
-    .subscribe(
-      (products: any[]) => {this.products = products.map(p => this.dec(p)); console.log(this.products);}
-    );
+    console.log('hola', this.dataService.Products);
+    this.products = this.dataService.Products;
+  
   }
 
   // tslint:disable-next-line: typedef

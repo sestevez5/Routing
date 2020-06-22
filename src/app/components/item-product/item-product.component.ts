@@ -7,9 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./item-product.component.css']
 })
 export class ItemProductComponent implements OnInit {
-
   @Input() product: Product;
-  
   constructor() { }
 
   ngOnInit(): void {
