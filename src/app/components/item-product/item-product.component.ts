@@ -1,5 +1,6 @@
 import { Product } from './../../models/product';
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-item-product',
@@ -8,9 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemProductComponent implements OnInit {
   @Input() product: Product;
-  constructor() { }
+  constructor() {
+ 
+   }
 
-  ngOnInit(): void {
-  }
+   ngOnInit(){   }
+
 
 }
