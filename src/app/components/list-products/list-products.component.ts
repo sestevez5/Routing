@@ -1,7 +1,7 @@
 import { Product } from './../../models/product';
-import { DataService } from './../../services/data.service';
+import { DataService } from '../../services/data.service';
 import { Component, OnInit, ɵConsole, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-products',
@@ -11,27 +11,16 @@ import { Subscription } from 'rxjs';
 export class ListProductsComponent implements OnInit, OnDestroy {
 
   productsSubscription: Subscription;
+  products$: Observable<Product[]>;
 
-  products: Product[];
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
+
 
   ngOnInit(): void {
-
-   this.productsSubscription=this.dataService.fetchProducts().subscribe(
-     (products: Product[]) => this.products = products
-   );
-
+    this.products$ = this.dataService.getproducts();
   }
 
-  ngOnDestroy() {
-    if (this.productsSubscription){
-      this.productsSubscription
-    }
-  }
-
-  // tslint:disable-next-line: typedef
-  dec(p: any) {
-    return new Product(p.id, p.name, p.description, p.price, p.imageUrl, p.quantity);
+  ngOnDestroy(): void {
   }
 
 }

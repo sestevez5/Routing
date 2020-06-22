@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class ItemProductComponent implements OnInit {
   product$: Product;
   constructor(dataService: DataService) {
-    this.product$
+
  
    }
 
