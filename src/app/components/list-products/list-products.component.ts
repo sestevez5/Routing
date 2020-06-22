@@ -18,6 +18,7 @@ export class ListProductsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.products$ = this.dataService.getproducts();
+    this.dataService.loadAllNotes();
   }
 
   ngOnDestroy(): void {
