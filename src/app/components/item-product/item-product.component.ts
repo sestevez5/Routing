@@ -8,8 +8,9 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./item-product.component.css']
 })
 export class ItemProductComponent implements OnInit {
-  @Input() product: Product;
-  constructor() {
+  product$: Product;
+  constructor(dataService: DataService) {
+    this.product$
  
    }
 
